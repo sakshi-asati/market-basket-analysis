@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery AI System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">🛒 Market Basket Analysis</div>
+
+<div class="container">
+    <h2>🧠 AI Recommendation System</h2>
+
+    <div class="search-box">
+        <input id="item" placeholder="Try: milk, bread, coffee, pizza">
+        <button onclick="getRec()">🔍 Search</button>
+    </div>
+
+    <h3 id="title"></h3>
+    <div id="output"></div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+{% for item in recommendations %}
+<li>{{ item }}</li>
+{% endfor %}
+{% for rec in recommendations %}
+<div class="rec-item">
+    🛒 {{ rec.item }}
+    <span class="percent">
+        {{ rec.confidence }}%
+    </span>
+</div>
+{% endfor %}
