@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 flask
 flask-cors
 pandas
+=======
+flask
+flask-cors
+pandas
+>>>>>>> f0f56f3decb32337cc9dc23be2abbf0ef1ff8751
 mlxtend
